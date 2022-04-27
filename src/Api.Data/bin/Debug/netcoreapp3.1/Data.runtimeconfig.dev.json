@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\kailo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\kailo\\.nuget\\packages",
+      "F:\\SDK\\NuGetPackages"
+    ]
+  }
+}
