@@ -2,6 +2,7 @@ using Api.application.Extension;
 using Api.Domain.Dtos;
 using Api.Domain.Entities;
 using Api.Domain.Interfaces.Services.Client;
+using Domain.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -120,6 +121,51 @@ namespace Api.Application.Controllers
             try
             {
                 return Ok(await _service.Delete(id));
+            }
+            catch (ArgumentException e)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
+        [Authorize("Bearer")]
+        [HttpPost("AddRandomClient")]
+        public async Task<ActionResult> AddRamdomClient()
+        {
+            try
+            {
+                return Ok(await _service.PostRandomUsers());
+
+            }   
+            catch (ArgumentException e)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
+        [Authorize("Bearer")]
+        [HttpPost("UpsertGroup")]
+        public async Task<ActionResult> UpsertGroup([FromQuery] ClientUpsertGroupDto Client)
+        {
+            try
+            {
+                return Ok(await _service.UpsertGroup(Client.Id, Client.GroupId));
+
+            }
+            catch (ArgumentException e)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
+        [Authorize("Bearer")]
+        [HttpDelete("DeleteGroup/{id}")]
+        public async Task<ActionResult> DeleteGroup(Guid id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                return Ok(await _service.RemoveGroupAsync(id));
             }
             catch (ArgumentException e)
             {

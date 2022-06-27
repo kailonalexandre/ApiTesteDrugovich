@@ -124,5 +124,18 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
+        [HttpPost("AddRandomUsers")]
+        public async Task<ActionResult> AddRamdomUsers()
+        {
+            try
+            {
+                return Ok(await _service.PostRandomUsers());
+
+            }
+            catch (ArgumentException e)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
     }
 }

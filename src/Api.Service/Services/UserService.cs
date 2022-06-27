@@ -1,5 +1,7 @@
 using Api.Domain.Entities;
 using Api.Domain.Interfaces;
+using Api.Domain.Models;
+using Bogus;
 using Domain.Interfaces.Service;
 using System;
 using System.Collections.Generic;
@@ -38,6 +40,22 @@ namespace Api.Service.Services
         public async Task<UserEntity> Put(UserEntity user)
         {
             return await _repository.UpdateAsync(user);
+        }
+        public async Task<IEnumerable<UserEntity>> PostRandomUsers()
+        {
+            var userFake = new Faker<UserEntity>("pt_BR")
+                .RuleFor(c => c.Name, f => f.Name.FullName())
+                .RuleFor(c => c.Email, f => f.Internet.Email())
+                .RuleFor(c => c.Level, f => (RoleLevel)f.PickRandom(new int[] {1, 2}))
+                .RuleFor(c => c.CreatedAt, f => f.Date.Recent(100))
+                .RuleFor(c => c.UpdateAt, f => f.Date.Recent(100));
+            var users = userFake.Generate(10);
+
+            foreach (var user in users)
+            {
+                await _repository.InsertAsync(user);
+            }
+            return users;
         }
     }
 

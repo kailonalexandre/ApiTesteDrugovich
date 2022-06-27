@@ -4,6 +4,7 @@ using Api.Domain.Interfaces.Services.Client;
 using Api.Domain.Models;
 using Api.Domain.Repository;
 using AutoMapper;
+using Bogus;
 using Domain.Interfaces.Service;
 using Domain.Models;
 using System;
@@ -75,7 +76,7 @@ namespace Api.Service.Services
             user.GroupId = groupId;
             return await _repository.UpdateAsync(user);
         }
-        public async Task<ClientEntity> RemoveAsync(Guid id)
+        public async Task<ClientEntity> RemoveGroupAsync(Guid id)
         {
             var user = await _repository.SelectAsync(id);
             if (user == null)
@@ -89,6 +90,25 @@ namespace Api.Service.Services
             if (idGroup == Guid.Empty)
                 return null;
             return await _repository.GetAllByGroup(idGroup);
+        }
+
+
+        public async Task<IEnumerable<ClientEntity>> PostRandomUsers()
+        {
+            var clientFake = new Faker<ClientEntity>("pt_BR")
+                .RuleFor(c => c.Name, f => f.Name.FullName())
+                .RuleFor(c => c.CNPJ, f => f.Commerce.Ean13())
+                .RuleFor(c => c.Email, f => f.Internet.Email())
+                .RuleFor(c => c.FundationDate, f => f.Date.Recent(100))
+                .RuleFor(c => c.CreatedAt, f => f.Date.Recent(100))
+                .RuleFor(c => c.UpdateAt, f => f.Date.Recent(100));
+            var clients = clientFake.Generate(10);
+
+            foreach(var client in clients)
+            {
+                await _repository.InsertAsync(client);
+            }
+            return clients;
         }
     }
 }

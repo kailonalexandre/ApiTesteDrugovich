@@ -76,6 +76,8 @@ C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\app
 C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\application.pdb
 C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\Bogus.dll
+C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\Faker.dll
 C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\kailo\Desktop\ApiGrupoECliente\src\Api.Application\bin\Debug\net6.0\Microsoft.Bcl.HashCode.dll

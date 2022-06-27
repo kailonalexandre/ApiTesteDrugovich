@@ -14,5 +14,7 @@ namespace Api.Domain.Interfaces.Services.Client
         Task<ClientEntity> Put(ClientEntity user, string token);
         Task<bool> Delete(Guid id);
         Task<ClientEntity> UpsertGroup(Guid id, Guid groupId);
+        Task<IEnumerable<ClientEntity>> PostRandomUsers();
+        Task<ClientEntity> RemoveGroupAsync(Guid id);
     }
 }

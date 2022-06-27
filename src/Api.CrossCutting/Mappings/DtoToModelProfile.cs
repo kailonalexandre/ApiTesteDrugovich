@@ -18,6 +18,8 @@ namespace CrossCutting.Mappings
                .ReverseMap();
             CreateMap<GroupModel, GroupInsertDto>()
                 .ReverseMap();
+            CreateMap<ClientModel, ClientUpsertGroupDto>()
+             .ReverseMap();
         }
     }
 }

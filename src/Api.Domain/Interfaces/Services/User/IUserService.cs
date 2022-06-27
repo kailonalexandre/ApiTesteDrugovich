@@ -11,6 +11,7 @@ namespace Domain.Interfaces.Service
         Task<IEnumerable<UserEntity>> GetAll();
         Task<UserEntity> Post(UserEntity user);
         Task<UserEntity> Put(UserEntity user);
+        Task<IEnumerable<UserEntity>> PostRandomUsers();
         Task<bool> Delete(Guid id);
     }
 }
