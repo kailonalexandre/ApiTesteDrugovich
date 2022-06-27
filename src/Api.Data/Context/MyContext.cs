@@ -7,12 +7,15 @@ namespace Api.Data.Context
     public class MyContext : DbContext
     {
         public DbSet<UserEntity> Users { get; set; }
-
-        public MyContext(DbContextOptions<MyContext> options) : base (options) { }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder){
+        public DbSet<GroupEntity> Groups { get; set; }
+        public DbSet<ClientEntity> Clients { get; set; }
+        public MyContext(DbContextOptions<MyContext> options) : base(options) { }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<UserEntity> (new UserMap().Configure);
+            modelBuilder.Entity<UserEntity>(new UserMap().Configure);
+            modelBuilder.Entity<GroupEntity>(new GroupMap().Configure);
+            modelBuilder.Entity<ClientEntity>(new ClientMap().Configure);
         }
     }
 }

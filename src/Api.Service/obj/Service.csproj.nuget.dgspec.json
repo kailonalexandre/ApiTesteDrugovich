@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\curso_api_Netcore\\src\\Api.Service\\Service.csproj": {}
+    "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\curso_api_Netcore\\src\\Api.Data\\Data.csproj": {
+    "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\curso_api_Netcore\\src\\Api.Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\curso_api_Netcore\\src\\Api.Data\\Data.csproj",
+        "projectPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Data\\Data.csproj",
         "packagesPath": "C:\\Users\\kailo\\.nuget\\packages\\",
-        "outputPath": "C:\\curso_api_Netcore\\src\\Api.Data\\obj\\",
+        "outputPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK\\NuGetPackages"
@@ -32,8 +32,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj"
+              "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj": {
+    "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\kailo\\.nuget\\packages\\",
-        "outputPath": "C:\\curso_api_Netcore\\src\\Api.Domain\\obj\\",
+        "outputPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK\\NuGetPackages"
@@ -127,6 +127,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.20.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -146,14 +152,14 @@
         }
       }
     },
-    "C:\\curso_api_Netcore\\src\\Api.Service\\Service.csproj": {
+    "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\curso_api_Netcore\\src\\Api.Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\curso_api_Netcore\\src\\Api.Service\\Service.csproj",
+        "projectPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Service\\Service.csproj",
         "packagesPath": "C:\\Users\\kailo\\.nuget\\packages\\",
-        "outputPath": "C:\\curso_api_Netcore\\src\\Api.Service\\obj\\",
+        "outputPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK\\NuGetPackages"
@@ -174,11 +180,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\curso_api_Netcore\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "C:\\curso_api_Netcore\\src\\Api.Data\\Data.csproj"
+              "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Data\\Data.csproj"
               },
-              "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj"
+              "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -192,6 +198,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

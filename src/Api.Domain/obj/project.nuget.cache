@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "YBUB8ZyJBNCZfUMm+AVMFNT4FP4lFxgoK6pR/+AN0yD09JmlovuKpSHrYW+MOjNfwT7mBz6R68q1nDRiVXzzEA==",
+  "dgSpecHash": "GgFW0DjcUb2PeihUyTIyx+yYhjxSpGV8EFIccPCPVfI9z0rXsINZQGLNjF0KMQcerOTJmzptPFpZX0FqmiXjrg==",
   "success": true,
-  "projectFilePath": "C:\\curso_api_Netcore\\src\\Api.Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\kailo\\Desktop\\ApiGrupoECliente\\src\\Api.Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kailo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\kailo\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.20.0\\microsoft.identitymodel.abstractions.6.20.0.nupkg.sha512",
+    "C:\\Users\\kailo\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.20.0\\microsoft.identitymodel.jsonwebtokens.6.20.0.nupkg.sha512",
+    "C:\\Users\\kailo\\.nuget\\packages\\microsoft.identitymodel.logging\\6.20.0\\microsoft.identitymodel.logging.6.20.0.nupkg.sha512",
+    "C:\\Users\\kailo\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.20.0\\microsoft.identitymodel.tokens.6.20.0.nupkg.sha512",
+    "C:\\Users\\kailo\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.20.0\\system.identitymodel.tokens.jwt.6.20.0.nupkg.sha512",
+    "C:\\Users\\kailo\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
